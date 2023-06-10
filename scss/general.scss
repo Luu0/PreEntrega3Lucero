@@ -5,17 +5,17 @@
 
 @font-face {
   font-family: "bebasneue";
-  src: url("../Fonts/BebasNeue-Regular.otf");
+  src: url("../assets/Fonts/BebasNeue-Regular.otf");
 }
 
 @font-face{
   font-family: "airamerica";
-  src: url("../Fonts/AirAmerica-Regular.otf");
+  src: url("../assets/Fonts/AirAmerica-Regular.otf");
 }
 
 
 body{
-  background-image: url("../img/drgbackground.jpg");
+  background-image: url("../assets/img/drgbackground.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
