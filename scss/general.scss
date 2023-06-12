@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -47,13 +48,41 @@ h2{
   color:orange;
   font-family: bebasneue;
   text-align: center;
-  
 }
+
+
+$breakpoints: (
+  sm  : 540px,
+  md  : 768px,
+  lg  : 1024px
+);
+
+@mixin media-up($breakpoint){
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)){
+    @content;
+  }
+}
+
+
 .p{
-  font-size:  2rem;
   color: white;
   font-family: bebasneue;
+
+    @include media-up(sm){
+      font-size: 10px;
+    }
+
+    @include media-up(md){
+      font-size: 25px;
+    }
+
+    @include media-up(sm){
+      font-size: 35px;
+    }
+    
+
 }
+
 
 header{
   position: sticky;
@@ -82,37 +111,40 @@ footer{
   margin: 0px;
 }
 
-@media (min-width: 320px) and (max-width: 444px) {
-  .p{
-      font-size: 25px;
-  }
 
-}
 
-@media (min-width: 445px) and (max-width: 1200px) {
-  .p{
-      font-size: 35px;
-  }
+// @media (min-width: 320px) and (max-width: 444px) {
+//   .p{
+//       font-size: 25px;
+//   }
+
+// }
+
+// @media (min-width: 445px) and (max-width: 1200px) {
+//   .p{
+//       font-size: 35px;
+//   }
   
-}
+// }
 
-@media (min-width: 1200px) {
-  .p{
-      font-size: 30px;
-  }
+// @media (min-width: 1200px) {
+//   .p{
+//       font-size: 30px;
+//   }
 
-}
+// }
 
-@media(min-width: 325px){
-  .logo{
-      margin: 10px;
-  }
-  footer{
-      background-color: #222222;
-      margin-top: 20px;
-      padding: 0px
-  }   
-}
+// @media(min-width: 325px){
+//   .logo{
+//       margin: 10px;
+//   }
+//   footer{
+//       background-color: #222222;
+//       margin-top: 20px;
+//       padding: 0px
+//   }   
+// }
+
 .centrado{
   display: flex;
   align-items: center;

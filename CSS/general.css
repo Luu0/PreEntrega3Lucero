@@ -48,9 +48,23 @@ h2 {
 }
 
 .p {
-  font-size: 2rem;
   color: white;
   font-family: bebasneue;
+}
+@media screen and (min-width: 540px) {
+  .p {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 540px) {
+  .p {
+    font-size: 35px;
+  }
 }
 
 header {
@@ -79,31 +93,6 @@ footer {
   margin: 0px;
 }
 
-@media (min-width: 320px) and (max-width: 444px) {
-  .p {
-    font-size: 25px;
-  }
-}
-@media (min-width: 445px) and (max-width: 1200px) {
-  .p {
-    font-size: 35px;
-  }
-}
-@media (min-width: 1200px) {
-  .p {
-    font-size: 30px;
-  }
-}
-@media (min-width: 325px) {
-  .logo {
-    margin: 10px;
-  }
-  footer {
-    background-color: #222222;
-    margin-top: 20px;
-    padding: 0px;
-  }
-}
 .centrado {
   display: flex;
   align-items: center;
