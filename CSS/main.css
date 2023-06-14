@@ -20,13 +20,15 @@ body {
   margin: 0;
 }
 
-.nav-item {
-  margin: 0px 50px;
-}
-
 #navbarNav {
   align-items: center;
   justify-content: center;
+}
+#navbarNav .nav-item {
+  margin: 0px 50px;
+}
+#navbarNav .colcamb:hover {
+  color: orange;
 }
 
 .containerback {
@@ -78,6 +80,14 @@ header {
   margin-top: 25px;
   padding: 20px;
 }
+.containerback2 .centrado {
+  display: flex;
+  align-items: center;
+}
+.containerback2 .clases:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.5);
+}
 
 a {
   text-decoration: none;
@@ -96,23 +106,9 @@ footer .logo {
   margin: 0px 5px;
 }
 
-.centrado {
-  display: flex;
-  align-items: center;
-}
-
 .lifont {
   font-family: airamerica;
   font-size: 2rem;
-}
-
-.colcamb:hover {
-  color: orange;
-}
-
-.clases:hover {
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.5);
 }
 
 /*# sourceMappingURL=main.css.map */

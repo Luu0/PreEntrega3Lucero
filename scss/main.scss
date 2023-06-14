@@ -1,1 +1,139 @@
-@import './general.scss';
+*{
+  margin: 0;
+  padding: 0;
+}
+
+//Transiciones
+@mixin transicionScale($valorescale){
+  transition: all 0.2s ease-in-out;
+  transform: scale($valorescale);
+}
+
+@font-face {
+  font-family: "bebasneue";
+  src: url("../assets/Fonts/BebasNeue-Regular.otf");
+}
+
+@font-face{
+  font-family: "airamerica";
+  src: url("../assets/Fonts/AirAmerica-Regular.otf");
+}
+
+
+body{
+  background-image: url("../assets/img/drgbackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; 
+  margin: 0;
+}
+
+#navbarNav{
+  align-items: center;
+  justify-content: center;
+
+  .nav-item{
+    margin: 0px 50px;
+  }
+
+  .colcamb:hover{ 
+    color: orange; 
+  }
+  
+}
+
+.containerback{
+  background-color: #222222;
+}
+
+h1{
+  font-family: airamerica;
+  font-size: 3.3rem;
+  color: orange;
+  text-align: center;
+}
+
+h2{
+  font-size: 2.8rem; 
+  color:orange;
+  font-family: bebasneue;
+  text-align: center;
+}
+
+
+$breakpoints: (
+  sm  : 540px,
+  md  : 768px,
+  lg  : 1024px
+);
+
+@mixin media-up($breakpoint){
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)){
+    @content;
+  }
+}
+
+
+.p{
+  color: white;
+  font-family: bebasneue;
+
+  @include media-up(sm){
+    font-size: 10px;
+  }
+
+  @include media-up(md){
+    font-size: 25px;
+  }
+
+  @include media-up(sm){
+    font-size: 35px;
+  }
+}
+
+header{
+  position: sticky;
+  z-index: 9999; 
+  top: 0px;
+}
+
+.containerback2{
+  background-color: #222222;
+  margin-top: 25px;
+  padding: 20px;
+
+  .centrado{
+    display: flex;
+    align-items: center;
+  }
+  .clases:hover{
+    @include transicionScale(1.5);
+  }
+
+}
+
+a{
+  text-decoration: none;
+}
+
+footer{
+  background-color: #222222;
+  margin-top: 20px;
+  padding: 10px;
+
+  .transcionfooter:hover{
+    @include transicionScale(1.5);
+  }
+  .logo{
+    margin: 0px 5px;
+  }
+}
+
+.lifont{
+  font-family: airamerica;
+  font-size: 2rem;
+  
+}
+
+
