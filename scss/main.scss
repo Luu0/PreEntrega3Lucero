@@ -19,7 +19,6 @@
   src: url("../assets/Fonts/AirAmerica-Regular.otf");
 }
 
-
 body{
   background-image: url("../assets/img/drgbackground.jpg");
   background-repeat: no-repeat;
@@ -61,7 +60,6 @@ h2{
   text-align: center;
 }
 
-
 $breakpoints: (
   sm  : 540px,
   md  : 768px,
@@ -73,7 +71,6 @@ $breakpoints: (
     @content;
   }
 }
-
 
 .p{
   color: white;
